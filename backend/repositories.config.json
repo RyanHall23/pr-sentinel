@@ -1,0 +1,7 @@
+{
+  "repositories": [
+    "org/frontend",
+    "org/backend",
+    "org/mobile"
+  ]
+}

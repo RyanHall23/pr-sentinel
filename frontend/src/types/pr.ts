@@ -1,0 +1,32 @@
+export interface PullRequest {
+  repo: string;
+  number: number;
+  title: string;
+  url: string;
+  author: string;
+  labels: string[];
+  approvals: number;
+  changeRequests: number;
+  developerComments: number;
+  unresolvedThreads: number;
+  resolvedThreads: number;
+  reviewDecision: 'approved' | 'changes_requested' | 'review_required' | 'none';
+  reviewers: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface User {
+  login: string;
+  avatarUrl: string;
+}
+
+export type SortOption =
+  | 'recently_updated'
+  | 'recently_created'
+  | 'most_unresolved'
+  | 'most_activity'
+  | 'awaiting_review'
+  | 'awaiting_qa';
+
+export type CommentFilter = 'all' | 'unresolved_only' | 'resolved_only';
